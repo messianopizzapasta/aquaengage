@@ -368,30 +368,44 @@
 
     /* ── PLATFORM PARTS (App Técnico, App Cliente, Web) ── */
     .platform-parts { background:var(--navy-2); }
-    .platform-parts .container { max-width:1000px; margin:0 auto; padding:0 48px; }
+    .platform-parts .container { max-width:920px; margin:0 auto; padding:0 48px; }
     .platform-part {
       margin-bottom:80px; padding-bottom:80px; border-bottom:1px solid var(--border);
     }
     .platform-part:last-of-type { margin-bottom:0; padding-bottom:0; border-bottom:none; }
     .platform-part h3 {
       font-family:'Playfair Display',serif; font-size:1.75rem; font-weight:700;
-      margin-bottom:24px; color:var(--white);
+      margin-bottom:16px; color:var(--white); letter-spacing:-.02em;
     }
-    .platform-part-desc { color:var(--muted); font-size:1rem; line-height:1.7; margin-bottom:24px; max-width:640px; }
+    .platform-part-desc {
+      color:var(--muted); font-size:1.0625rem; line-height:1.75;
+      margin-bottom:28px; max-width:56ch;
+    }
     .platform-video-wrap {
       position:relative; padding-bottom:56.25%; height:0; overflow:hidden;
-      border-radius:12px; background:var(--navy); margin-bottom:28px;
+      border-radius:12px; background:var(--navy); margin-bottom:32px;
       box-shadow:0 20px 60px rgba(0,0,0,.4);
     }
     .platform-video-wrap iframe {
       position:absolute; top:0; left:0; width:100%; height:100%;
     }
-    .platform-benefits { list-style:none; }
-    .platform-benefits li {
-      display:flex; align-items:flex-start; gap:12px;
-      color:var(--muted); font-size:.9375rem; line-height:1.6; margin-bottom:14px;
+    .platform-benefits {
+      list-style:none; display:flex; flex-direction:column; gap:16px;
     }
-    .platform-benefits li::before { content:'✓'; color:var(--accent); font-weight:700; flex-shrink:0; }
+    .platform-benefits li {
+      display:flex; align-items:flex-start; gap:14px;
+      padding:18px 20px; background:var(--navy); border:1px solid var(--border);
+      border-radius:10px; border-left:3px solid var(--accent);
+      color:#c5d4e3; font-size:0.9375rem; line-height:1.65;
+      text-align:left;
+    }
+    .platform-benefits li::before {
+      content:'✓'; color:var(--accent); font-weight:700; flex-shrink:0;
+      margin-top:1px;
+    }
+    .platform-benefits li strong {
+      color:var(--white); font-weight:600; display:block; margin-bottom:4px;
+    }
 
     /* ── FORM ── */
     .form-section { background:var(--navy-2); }
@@ -460,6 +474,7 @@
       .authority-grid { grid-template-columns:1fr; }
       .platform-parts .container { padding:0 24px; }
       .platform-part { margin-bottom:56px; padding-bottom:56px; }
+      .platform-benefits li { padding:14px 16px; gap:12px; font-size:0.9rem; }
       .form-2col { grid-template-columns:1fr; }
       .hphone.left, .hphone.right { display:none; }
       .hero-phones { height:420px; }
