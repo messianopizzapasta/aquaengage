@@ -487,7 +487,12 @@
 
 <nav id="navbar">
   <div class="nav-logo">Aqua<span>Engage</span></div>
-  <a href="#contato" class="nav-cta">Agendar Reunião</a>
+  <div style="display:flex;align-items:center;gap:20px;">
+    <span style="font-size:.8rem;color:var(--muted);">PT</span>
+    <a href="landing-en.html" style="color:var(--muted);font-size:.85rem;text-decoration:none;">EN</a>
+    <a href="landing-de.html" style="color:var(--muted);font-size:.85rem;text-decoration:none;">DE</a>
+    <a href="#contato" class="nav-cta">Agendar Reunião</a>
+  </div>
 </nav>
 
 <!-- ═══════════════ HERO ═══════════════ -->
@@ -880,9 +885,4 @@
   // ── Form ──
   document.getElementById('contactForm').addEventListener('submit', function(e) {
     e.preventDefault();
-    this.style.display='none';
-    document.getElementById('successMsg').style.display='block';
-  });
-</script>
-</body>
-</html>
+    thi
