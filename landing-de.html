@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AquaEngage – Techniker-App, Kunden-App und Web-Dashboard für die Pool-Wartung</title>
+  <meta name="description" content="White-Label-Plattform für Pool-Service-Unternehmen: Techniker-App, Kunden-App und Web-Dashboard. Über 20 Unternehmen nutzen sie bereits. Kundenbindung, Transparenz und mehr Umsatz."/>
+  <meta name="keywords" content="manutenção de piscinas, app técnico piscinas, app cliente piscinas, painel administrativo piscinas, gestão piscinas, white-label, fidelização de clientes, Rio de Janeiro, customer engagement"/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="theme-color" content="#050E1F"/>
+  <meta property="og:title" content="AquaEngage – App Técnico, App Cliente e Painel Web para Piscinas"/>
+  <meta property="og:description" content="Sua plataforma digital: app do técnico, app do cliente e painel web. White-label para manutenção de piscinas. Mais de 20 empresas já utilizam."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:locale" content="de_DE"/>
+  <meta property="og:url" content="https://aquaengage.com/landing-de.html"/>
+  <link rel="canonical" href="https://aquaengage.com/landing-de.html"/>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"AquaEngage – Plattform für Pool-Wartung","description":"White-Label-Plattform mit Techniker-App, Kunden-App und Web-Dashboard für Pool-Service-Unternehmen.","inLanguage":"de","url":"https://aquaengage.com/landing-de.html"}</script>
+  <!-- Vídeos: substitua VIDEO_TECNICO, VIDEO_CLIENTE e VIDEO_WEB na seção "A plataforma em detalhe" pelos IDs reais do YouTube. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy:   #050E1F;
+      --navy-2: #091729;
+      --navy-3: #0D2240;
+      --accent: #1E90FF;
+      --accent-soft: rgba(30,144,255,0.12);
+      --gold:       #C9A96E;
+      --gold-light: #E8C98A;
+      --white: #FFFFFF;
+      --muted: #8BA3BF;
+      --border: rgba(255,255,255,0.08);
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--navy); color: var(--white);
+      overflow-x: hidden; line-height: 1.6;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      padding: 18px 48px;
+      display: flex; align-items: center; justify-content: space-between;
+      background: rgba(5,14,31,0.88); backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border); transition: border-color .3s;
+    }
+    .nav-logo { font-family:'Playfair Display',serif; font-size:1.5rem; font-weight:700; }
+    .nav-logo span { color: var(--accent); }
+    .nav-cta {
+      background: var(--accent); color: #fff; border: none;
+      padding: 10px 26px; border-radius: 4px;
+      font-family:'DM Sans',sans-serif; font-size:.875rem; font-weight:600;
+      cursor:pointer; text-decoration:none; transition: background .2s, transform .2s;
+    }
+    .nav-cta:hover { background:#1565B8; transform:translateY(-1px); }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh; display:flex; align-items:center;
+      padding: 120px 48px 80px; position:relative; overflow:hidden;
+    }
+    .hero-bg {
+      position:absolute; inset:0;
+      background:
+        radial-gradient(ellipse 75% 65% at 65% 50%, rgba(10,75,140,.4) 0%, transparent 65%),
+        radial-gradient(ellipse 50% 40% at 85% 20%, rgba(30,144,255,.12) 0%, transparent 60%),
+        var(--navy);
+    }
+    .hero-grid {
+      position:absolute; inset:0;
+      background-image:
+        linear-gradient(rgba(30,144,255,.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(30,144,255,.04) 1px, transparent 1px);
+      background-size: 60px 60px;
+      mask-image: radial-gradient(ellipse 80% 80% at center, black, transparent);
+    }
+    .hero-inner {
+      max-width:1280px; margin:0 auto; width:100%;
+      display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center;
+      position:relative; z-index:2;
+    }
+    .hero-badge {
+      display:inline-flex; align-items:center; gap:8px;
+      background:rgba(201,169,110,.12); border:1px solid rgba(201,169,110,.3);
+      border-radius:100px; padding:6px 18px;
+      font-size:.72rem; font-weight:600; color:var(--gold-light);
+      letter-spacing:.1em; text-transform:uppercase; margin-bottom:28px;
+    }
+    .hero-badge-dot {
+      width:6px; height:6px; border-radius:50%; background:var(--gold);
+      animation: pulse-d 2s ease-in-out infinite;
+    }
+    @keyframes pulse-d {
+      0%,100% { opacity:1; transform:scale(1); }
+      50%      { opacity:.4; transform:scale(.7); }
+    }
+    h1 {
+      font-family:'Playfair Display',serif;
+      font-size:clamp(2.4rem,4vw,3.75rem);
+      font-weight:700; line-height:1.12; letter-spacing:-.025em; margin-bottom:24px;
+    }
+    h1 em { font-style:italic; color:var(--accent); }
+    .hero-sub {
+      font-size:1.0625rem; color:var(--muted); line-height:1.75;
+      margin-bottom:40px; font-weight:300; max-width:520px;
+    }
+    .hero-social-proof {
+      display:inline-flex; align-items:center; gap:8px;
+      background:rgba(30,144,255,.1); border:1px solid rgba(30,144,255,.25);
+      border-radius:100px; padding:8px 20px;
+      font-size:.875rem; font-weight:500; color:var(--white);
+      margin-bottom:32px;
+    }
+    .hero-social-proof strong { color:var(--accent); }
+    .hero-actions { display:flex; gap:14px; flex-wrap:wrap; }
+    .btn-primary {
+      background:var(--accent); color:#fff; border:none;
+      padding:15px 30px; border-radius:4px;
+      font-family:'DM Sans',sans-serif; font-size:.9375rem; font-weight:600;
+      cursor:pointer; text-decoration:none;
+      transition:all .25s; display:inline-flex; align-items:center; gap:8px;
+    }
+    .btn-primary:hover { background:#1565B8; transform:translateY(-2px); box-shadow:0 8px 32px rgba(30,144,255,.3); }
+    .btn-secondary {
+      background:transparent; color:#fff;
+      border:1px solid rgba(255,255,255,.22); padding:15px 30px; border-radius:4px;
+      font-family:'DM Sans',sans-serif; font-size:.9375rem; font-weight:500;
+      cursor:pointer; text-decoration:none; transition:all .25s;
+    }
+    .btn-secondary:hover { border-color:rgba(255,255,255,.6); background:rgba(255,255,255,.05); }
+
+    /* ── HERO PHONES (3 stacked) ── */
+    .hero-phones {
+      display:flex; align-items:flex-end; justify-content:center;
+      gap:0; position:relative; height:520px;
+    }
+    /* Each phone is an <img> inside a styled shell */
+    .hphone {
+      position:absolute; bottom:0;
+      border-radius: 36px;
+      overflow: hidden;
+      box-shadow: 0 32px 80px rgba(0,0,0,.65), 0 0 0 1.5px rgba(255,255,255,.07);
+    }
+    .hphone img { width:100%; display:block; border-radius:34px; }
+    /* Center: main */
+    .hphone.main {
+      width:210px; left:50%; transform:translateX(-50%);
+      z-index:3;
+      box-shadow: 0 40px 100px rgba(0,0,0,.75), 0 0 50px rgba(30,144,255,.18), 0 0 0 1.5px rgba(255,255,255,.1);
+    }
+    /* Left side */
+    .hphone.left {
+      width:178px;
+      left: calc(50% - 200px);
+      z-index:2; opacity:.72;
+      transform: perspective(900px) rotateY(14deg) translateY(30px) scale(.93);
+      transform-origin: right center;
+    }
+    /* Right side */
+    .hphone.right {
+      width:178px;
+      left: calc(50% + 22px);
+      z-index:2; opacity:.72;
+      transform: perspective(900px) rotateY(-14deg) translateY(30px) scale(.93);
+      transform-origin: left center;
+    }
+    .revenue-badge {
+      position:absolute; bottom:20px; right:calc(50% - 290px);
+      background:linear-gradient(135deg,#0F3460,var(--navy-3));
+      border:1px solid rgba(201,169,110,.4);
+      border-radius:12px; padding:14px 18px; text-align:center; z-index:10;
+      box-shadow:0 12px 40px rgba(0,0,0,.5);
+    }
+    .revenue-badge strong {
+      display:block; font-size:1.5rem; font-weight:700;
+      color:var(--gold-light); font-family:'Playfair Display',serif;
+    }
+    .revenue-badge span { font-size:.68rem; color:var(--muted); text-transform:uppercase; letter-spacing:.06em; }
+
+    /* ── SECTIONS ── */
+    section { padding:100px 48px; }
+    .container { max-width:1280px; margin:0 auto; }
+    .section-label {
+      font-size:.72rem; font-weight:600; text-transform:uppercase;
+      letter-spacing:.14em; color:var(--accent); margin-bottom:16px;
+    }
+    h2 {
+      font-family:'Playfair Display',serif;
+      font-size:clamp(2rem,3.2vw,2.75rem);
+      font-weight:700; line-height:1.2; letter-spacing:-.02em; margin-bottom:20px;
+    }
+    .divider { width:48px; height:2px; background:var(--accent); margin:20px 0; }
+    .section-sub { font-size:1.0625rem; color:var(--muted); line-height:1.75; max-width:600px; }
+
+    /* ── PROBLEMS ── */
+    .problems { background:var(--navy-2); }
+    .problems-grid {
+      display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:20px; margin-top:60px;
+    }
+    .problem-card {
+      background:var(--navy); border:1px solid var(--border);
+      border-radius:12px; padding:30px;
+      transition:border-color .3s, transform .3s;
+    }
+    .problem-card:hover { border-color:rgba(30,144,255,.3); transform:translateY(-4px); }
+    .problem-icon {
+      width:46px; height:46px; border-radius:10px;
+      background:rgba(255,70,70,.1); border:1px solid rgba(255,70,70,.2);
+      display:flex; align-items:center; justify-content:center;
+      font-size:1.2rem; margin-bottom:20px;
+    }
+    .problem-card h3 { font-size:1rem; font-weight:600; margin-bottom:10px; }
+    .problem-card p  { color:var(--muted); font-size:.875rem; line-height:1.65; }
+
+    /* ── SOLUTION + CAROUSEL ── */
+    .solution { background:var(--navy); }
+    .solution-inner {
+      display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center;
+    }
+    .solution-features { display:flex; flex-direction:column; gap:18px; }
+    .feature-item {
+      display:flex; gap:18px; align-items:flex-start;
+      padding:22px; background:var(--navy-2); border:1px solid var(--border);
+      border-radius:10px; transition:border-color .3s;
+    }
+    .feature-item:hover { border-color:rgba(30,144,255,.3); }
+    .feature-icon {
+      width:42px; height:42px; border-radius:8px;
+      background:var(--accent-soft); border:1px solid rgba(30,144,255,.2);
+      display:flex; align-items:center; justify-content:center;
+      font-size:1.1rem; flex-shrink:0;
+    }
+    .feature-item h3 { font-size:.9rem; font-weight:600; margin-bottom:5px; }
+    .feature-item p  { color:var(--muted); font-size:.83rem; line-height:1.6; }
+
+    /* CAROUSEL */
+    .carousel-wrap {
+      display:flex; flex-direction:column; align-items:center;
+    }
+    /* Fixed-height window — hides overflow so slides don't shift layout */
+    .carousel-window {
+      width:280px;
+      height:560px;          /* fixed px height */
+      position:relative;
+      overflow:hidden;        /* clip taller images */
+      border-radius:36px;
+      box-shadow:
+        0 40px 100px rgba(0,0,0,.7),
+        0 0 50px rgba(30,144,255,.12),
+        0 0 0 1.5px rgba(255,255,255,.08);
+    }
+    .carousel-slide {
+      position:absolute; inset:0;
+      opacity:0; transition:opacity .5s ease;
+      pointer-events:none;
+    }
+    .carousel-slide.active {
+      opacity:1; pointer-events:auto;
+    }
+    /* Each slide image fills the window, aligned to top */
+    .carousel-slide img {
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      object-position:top center;  /* show top of screen first */
+      display:block;
+    }
+    /* Subtle bottom fade so crop looks intentional */
+    .carousel-window::after {
+      content:'';
+      position:absolute; bottom:0; left:0; right:0; height:80px;
+      background:linear-gradient(transparent, rgba(5,14,31,.6));
+      pointer-events:none; border-radius:0 0 36px 36px;
+    }
+    .carousel-controls {
+      display:flex; align-items:center; gap:16px; margin-top:20px;
+    }
+    .carousel-btn {
+      width:36px; height:36px; border-radius:50%;
+      background:var(--accent-soft); border:1px solid rgba(30,144,255,.25);
+      color:var(--accent); cursor:pointer; font-size:1rem;
+      display:flex; align-items:center; justify-content:center;
+      transition:background .2s;
+    }
+    .carousel-btn:hover { background:rgba(30,144,255,.25); }
+    .carousel-dots { display:flex; gap:8px; }
+    .cdot {
+      width:8px; height:8px; border-radius:4px; border:none; cursor:pointer;
+      background:rgba(255,255,255,.2); transition:all .3s;
+    }
+    .cdot.active {
+      background:var(--accent); width:22px;
+    }
+    .carousel-caption {
+      margin-top:14px; font-size:.78rem; color:var(--muted);
+      letter-spacing:.04em; text-align:center;
+    }
+
+    /* ── REVENUE ── */
+    .revenue { background:var(--navy-2); }
+    .revenue-inner { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; }
+    .revenue-calc {
+      background:linear-gradient(135deg,var(--navy-3),var(--navy));
+      border:1px solid rgba(201,169,110,.2); border-radius:16px; padding:40px;
+      position:relative; overflow:hidden;
+    }
+    .revenue-calc::before {
+      content:''; position:absolute; top:0; left:0; right:0; height:2px;
+      background:linear-gradient(90deg,transparent,var(--gold),transparent);
+    }
+    .calc-label { font-size:.72rem; text-transform:uppercase; letter-spacing:.1em; color:var(--gold); margin-bottom:32px; font-weight:600; }
+    .calc-row { display:flex; justify-content:space-between; align-items:center; padding:15px 0; border-bottom:1px solid var(--border); font-size:.875rem; }
+    .calc-row:last-child { border-bottom:none; }
+    .calc-row span { color:var(--muted); }
+    .calc-total { margin-top:24px; padding:24px; background:rgba(201,169,110,.1); border:1px solid rgba(201,169,110,.3); border-radius:10px; text-align:center; }
+    .calc-total-label { font-size:.75rem; color:var(--gold); text-transform:uppercase; letter-spacing:.08em; margin-bottom:8px; }
+    .calc-total-value { font-family:'Playfair Display',serif; font-size:2.5rem; font-weight:700; color:var(--gold-light); }
+    .calc-total-sub { font-size:.78rem; color:var(--muted); margin-top:4px; }
+
+    /* ── PILOT ── */
+    .pilot {
+      background:linear-gradient(160deg,#040B18 0%,var(--navy-2) 50%,#040B18 100%);
+      text-align:center; position:relative; overflow:hidden;
+    }
+    .pilot::before {
+      content:''; position:absolute; top:-200px; left:50%; transform:translateX(-50%);
+      width:600px; height:600px; border-radius:50%;
+      background:radial-gradient(circle,rgba(30,144,255,.12),transparent 70%);
+    }
+    .pilot-inner { position:relative; z-index:2; }
+    .pilot-badge {
+      display:inline-flex; align-items:center; gap:10px;
+      background:rgba(201,169,110,.1); border:1px solid rgba(201,169,110,.35);
+      border-radius:100px; padding:8px 22px;
+      font-size:.78rem; font-weight:600; color:var(--gold-light);
+      text-transform:uppercase; letter-spacing:.08em; margin-bottom:32px;
+    }
+    .pilot-num {
+      font-family:'Playfair Display',serif;
+      font-size:clamp(4rem,10vw,8rem); font-weight:700;
+      background:linear-gradient(135deg,var(--gold),var(--gold-light));
+      background-clip:text; -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+      line-height:1; margin-bottom:8px;
+    }
+    .pilot-sub { font-size:1.2rem; color:var(--muted); margin-bottom:40px; }
+    .pilot-perks { display:flex; flex-wrap:wrap; gap:14px; justify-content:center; margin:36px 0; }
+    .pilot-perk {
+      display:flex; align-items:center; gap:10px;
+      background:rgba(30,144,255,.08); border:1px solid rgba(30,144,255,.2);
+      border-radius:100px; padding:9px 18px; font-size:.85rem;
+    }
+
+    /* ── AUTHORITY ── */
+    .authority { background:var(--navy); }
+    .authority-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:28px; margin-top:60px; }
+    .authority-card {
+      padding:34px 26px; border:1px solid var(--border); border-radius:12px;
+      transition:border-color .3s, transform .3s;
+    }
+    .authority-card:hover { border-color:rgba(30,144,255,.3); transform:translateY(-6px); }
+    .authority-num { font-family:'Playfair Display',serif; font-size:3rem; font-weight:700; color:var(--accent); line-height:1; margin-bottom:12px; }
+    .authority-card h3 { font-size:1rem; font-weight:600; margin-bottom:10px; }
+    .authority-card p  { color:var(--muted); font-size:.86rem; line-height:1.65; }
+
+    /* ── PLATFORM PARTS (App Técnico, App Cliente, Web) ── */
+    .platform-parts { background:var(--navy-2); }
+    .platform-parts .container { max-width:920px; margin:0 auto; padding:0 48px; }
+    .platform-part {
+      margin-bottom:80px; padding-bottom:80px; border-bottom:1px solid var(--border);
+    }
+    .platform-part:last-of-type { margin-bottom:0; padding-bottom:0; border-bottom:none; }
+    .platform-part h3 {
+      font-family:'Playfair Display',serif; font-size:1.75rem; font-weight:700;
+      margin-bottom:16px; color:var(--white); letter-spacing:-.02em;
+    }
+    .platform-part-desc {
+      color:var(--muted); font-size:1.0625rem; line-height:1.75;
+      margin-bottom:28px; max-width:56ch;
+    }
+    .platform-video-wrap {
+      position:relative; padding-bottom:56.25%; height:0; overflow:hidden;
+      border-radius:12px; background:var(--navy); margin-bottom:32px;
+      box-shadow:0 20px 60px rgba(0,0,0,.4);
+    }
+    .platform-video-wrap iframe {
+      position:absolute; top:0; left:0; width:100%; height:100%;
+    }
+    .platform-benefits {
+      list-style:none; display:flex; flex-direction:column; gap:16px;
+    }
+    .platform-benefits li {
+      display:flex; align-items:flex-start; gap:14px;
+      padding:18px 20px; background:var(--navy); border:1px solid var(--border);
+      border-radius:10px; border-left:3px solid var(--accent);
+      color:#c5d4e3; font-size:0.9375rem; line-height:1.65;
+      text-align:left;
+    }
+    .platform-benefits li::before {
+      content:'✓'; color:var(--accent); font-weight:700; flex-shrink:0;
+      margin-top:1px;
+    }
+    .platform-benefits li strong {
+      color:var(--white); font-weight:600; display:block; margin-bottom:4px;
+    }
+
+    /* ── FORM ── */
+    .form-section { background:var(--navy-2); }
+    .form-wrapper { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start; }
+    .form-card {
+      background:var(--navy); border:1px solid rgba(30,144,255,.2);
+      border-radius:16px; padding:40px; position:relative; overflow:hidden;
+    }
+    .form-card::before { content:''; position:absolute; top:0; left:0; right:0; height:2px; background:linear-gradient(90deg,transparent,var(--accent),transparent); }
+    .form-title { font-family:'Playfair Display',serif; font-size:1.5rem; margin-bottom:8px; }
+    .form-sub { color:var(--muted); font-size:.875rem; margin-bottom:32px; }
+    .form-group { margin-bottom:18px; }
+    .form-group label { display:block; font-size:.75rem; font-weight:500; color:var(--muted); margin-bottom:7px; text-transform:uppercase; letter-spacing:.07em; }
+    .form-group input, .form-group select {
+      width:100%; background:var(--navy-2); border:1px solid var(--border);
+      border-radius:6px; padding:12px 14px; color:#fff;
+      font-family:'DM Sans',sans-serif; font-size:.875rem;
+      transition:border-color .2s; outline:none;
+    }
+    .form-group input::placeholder { color:rgba(139,163,191,.4); }
+    .form-group input:focus, .form-group select:focus { border-color:var(--accent); }
+    .form-group select option { background:var(--navy-2); }
+    .form-2col { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+    .btn-form {
+      width:100%; background:var(--accent); color:#fff; border:none;
+      padding:15px; border-radius:6px;
+      font-family:'DM Sans',sans-serif; font-size:.9375rem; font-weight:600;
+      cursor:pointer; transition:all .25s; margin-top:8px;
+    }
+    .btn-form:hover { background:#1565B8; transform:translateY(-2px); box-shadow:0 8px 30px rgba(30,144,255,.3); }
+    .form-note { font-size:.72rem; color:var(--muted); text-align:center; margin-top:14px; }
+    .form-point { display:flex; gap:14px; align-items:flex-start; margin-bottom:22px; }
+    .form-point-icon { width:38px; height:38px; border-radius:8px; background:var(--accent-soft); border:1px solid rgba(30,144,255,.2); display:flex; align-items:center; justify-content:center; font-size:.95rem; flex-shrink:0; }
+    .form-point h4 { font-size:.9rem; font-weight:600; margin-bottom:3px; }
+    .form-point p  { font-size:.82rem; color:var(--muted); }
+    .success-msg { display:none; background:rgba(30,144,255,.1); border:1px solid rgba(30,144,255,.3); border-radius:8px; padding:24px; text-align:center; color:#90C5FF; }
+
+    /* ── FINAL CTA ── */
+    .final-cta {
+      background:linear-gradient(160deg,var(--navy-3) 0%,var(--navy-2) 50%,var(--navy) 100%);
+      text-align:center; position:relative; overflow:hidden; padding:120px 48px;
+    }
+    .final-cta-inner { position:relative; z-index:2; max-width:800px; margin:0 auto; }
+    .final-cta h2 { margin-bottom:24px; }
+    .final-cta p { color:var(--muted); font-size:1.0625rem; margin-bottom:48px; }
+    .final-actions { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
+
+    /* ── FOOTER ── */
+    footer {
+      padding:36px 48px; border-top:1px solid var(--border);
+      display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px;
+    }
+    .footer-logo { font-family:'Playfair Display',serif; font-size:1.25rem; font-weight:700; }
+    .footer-logo span { color:var(--accent); }
+
+    /* ── ANIMATIONS ── */
+    .fade-up { opacity:0; transform:translateY(28px); transition:opacity .7s ease, transform .7s ease; }
+    .fade-up.visible { opacity:1; transform:translateY(0); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width:960px) {
+      nav { padding:16px 24px; }
+      section { padding:70px 24px; }
+      .hero { padding:100px 24px 60px; }
+      .hero-inner, .solution-inner, .revenue-inner, .form-wrapper { grid-template-columns:1fr; gap:48px; }
+      .authority-grid { grid-template-columns:1fr; }
+      .platform-parts .container { padding:0 24px; }
+      .platform-part { margin-bottom:56px; padding-bottom:56px; }
+      .platform-benefits li { padding:14px 16px; gap:12px; font-size:0.9rem; }
+      .form-2col { grid-template-columns:1fr; }
+      .hphone.left, .hphone.right { display:none; }
+      .hero-phones { height:420px; }
+      .hphone.main { width:240px; }
+      footer { flex-direction:column; text-align:center; }
+    }
+  </style>
+</head>
+<body>
+
+<nav id="navbar">
+  <div class="nav-logo">Aqua<span>Engage</span></div>
+  <div style="display:flex;align-items:center;gap:20px;">
+    <a href="landing.html" style="color:var(--muted);font-size:.85rem;text-decoration:none;">PT</a>
+    <a href="landing-en.html" style="color:var(--muted);font-size:.85rem;text-decoration:none;">EN</a>
+    <span style="font-size:.8rem;color:var(--muted);">DE</span>
+    <a href="#contato" class="nav-cta">Meeting buchen</a>
+  </div>
+</nav>
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<section class="hero" id="inicio">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-inner">
+    <div>
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        White-Label-Plattform · Rio de Janeiro
+      </div>
+      <h1>Ihre eigene digitale Plattform für <em>Kundenbindung</em> und Umsatzwachstum</h1>
+      <p class="hero-sub">Premium-Pool-Service-Unternehmen mit eigener App — Android und iOS — zur Kundenbindung, Automatisierung der Kommunikation und Steigerung des Monatsumsatzes.</p>
+      <p class="hero-social-proof"><strong>Über 20 Unternehmen</strong> nutzen bereits AquaEngage</p>
+      <div class="hero-actions">
+        <a href="#contato" class="btn-primary">Strategie-Meeting buchen →</a>
+        <a href="#contato" class="btn-secondary">Präsentation anfragen</a>
+      </div>
+    </div>
+
+    <!-- 3 phones -->
+    <div class="hero-phones">
+      <div class="hphone left">
+        
+      </div>
+      <div class="hphone main">
+        
+      </div>
+      <div class="hphone right">
+        
+      </div>
+      <div class="revenue-badge">
+        <strong>+R$12k</strong>
+        <span>Umsatz/Monat</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ PROBLEMS ═══════════════ -->
+<section class="problems" id="problemas">
+  <div class="container">
+    <div class="fade-up">
+      <div class="section-label">Die aktuelle Situation</div>
+      <h2>Die Probleme, die das Wachstum Ihres Unternehmens begrenzen</h2>
+      <div class="divider"></div>
+      <p class="section-sub">Pool-Service-Unternehmen arbeiten mit zersplitterten Tools – das schadet dem Kundenerlebnis und lässt jeden Monat Geld liegen.</p>
+    </div>
+    <div class="problems-grid">
+      <div class="problem-card fade-up">
+        <div class="problem-icon">💬</div>
+        <h3>Unstrukturierte Kommunikation per WhatsApp</h3>
+        <p>Verlorene Nachrichten, keine Historie, reaktiver Support. Ohne Struktur sinkt der wahrgenommene Wert – und der Kunde vergleicht nur noch den Preis.</p>
+      </div>
+      <div class="problem-card fade-up">
+        <div class="problem-icon">🔍</div>
+        <h3>Keine Differenzierung am Markt</h3>
+        <p>Wenn Ihr Service wie der der Konkurrenz wirkt, wird der Preis zum einzigen Kriterium. Ohne eigenen Kanal hebt sich Ihre Marke nicht ab.</p>
+      </div>
+      <div class="problem-card fade-up">
+        <div class="problem-icon">📉</div>
+        <h3>Verpasste Upsell-Chancen</h3>
+        <p>Zufriedene Kunden würden mehr kaufen. Ohne strukturierten Angebotskanal gehen diese Chancen bei jedem Besuch verloren.</p>
+      </div>
+      <div class="problem-card fade-up">
+        <div class="problem-icon">🔄</div>
+        <h3>Geringe Kundenbindung</h3>
+        <p>Ohne laufendes Engagement fühlen sich Kunden zwischen Besuchen vergessen. Stiller Churn frisst die Kundenbasis, ohne dass Sie es merken.</p>
+      </div>
+      <div class="problem-card fade-up">
+        <div class="problem-icon">📊</div>
+        <h3>Keine strategischen Daten</h3>
+        <p>Ohne Engagement-Kennzahlen und klaren Blick auf die Kundenbasis sind datenbasierte Entscheidungen unmöglich.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ SOLUTION + CAROUSEL ═══════════════ -->
+<section class="solution" id="plataforma">
+  <div class="container">
+    <div class="solution-inner">
+      <div class="fade-up">
+        <div class="section-label">Die Lösung</div>
+        <h2>Eine komplette Plattform mit Ihrer Marke</h2>
+        <div class="divider"></div>
+        <p class="section-sub" style="margin-bottom:36px;">AquaEngage liefert die digitale Infrastruktur, die Premium-Unternehmen für konstantes Wachstum brauchen.</p>
+        <div class="solution-features">
+          <div class="feature-item">
+            <div class="feature-icon">📱</div>
+            <div>
+              <h3>App mit eigener Marke</h3>
+              <p>Android und iOS mit Ihrem Firmennamen, Logo und Farben. Individueller Login, 100 % Ihre Identität.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">📋</div>
+            <div>
+              <h3>Digitales Service-Protokoll</h3>
+              <p>Chlor, pH, Fotos und Notizen bei jedem Besuch – direkt aus der App, in Echtzeit.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">✅</div>
+            <div>
+              <h3>Automatische Bestätigung an den Kunden</h3>
+              <p>Automatische E-Mail mit Service-Zusammenfassung nach jedem Besuch. Professionalität ohne Extra-Aufwand.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">📍</div>
+            <div>
+              <h3>Vollständige Kundenakte</h3>
+              <p>Adresse, Kontakte, Service-Verlauf, Pool-Parameter und nächster Termin – alles auf einen Blick.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">🖥️</div>
+            <div>
+              <h3>Web-Admin-Portal</h3>
+              <p>Überblick über die Operation – Kundenstamm, Termine und Kennzahlen in einem zentralen Dashboard.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SCREENSHOT CAROUSEL: Substitua os src das imagens (ou use paths como /screenshots/slide-1.png) pelos seus screenshots reais da plataforma. -->
+      <div class="carousel-wrap fade-up">
+        <div class="carousel-window" id="cWindow">
+          <div class="carousel-slide active" data-caption="Login mit Ihrer Marke">
+            
+          </div>
+          <div class="carousel-slide" data-caption="Techniker-Dashboard — heutige Dienste">
+           
+          </div>
+          <div class="carousel-slide" data-caption="Vollständige Kundenakte">
+           
+          </div>
+          <div class="carousel-slide" data-caption="Automatische Kundenbestätigung">
+            
+          </div>
+          <div class="carousel-slide" data-caption="Detailliertes technisches Protokoll">
+            
+          </div>
+        </div>
+        <div class="carousel-controls">
+          <button class="carousel-btn" onclick="cSlide(-1)">‹</button>
+          <div class="carousel-dots" id="cDots"></div>
+          <button class="carousel-btn" onclick="cSlide(1)">›</button>
+        </div>
+        <div class="carousel-caption" id="cCaption">Login mit Ihrer Marke</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ REVENUE ═══════════════ -->
+<section class="revenue" id="impacto">
+  <div class="container">
+    <div class="revenue-inner">
+      <div class="fade-up">
+        <div class="section-label">Finanzielle Wirkung</div>
+        <h2>Investition mit messbarem Return</h2>
+        <div class="divider"></div>
+        <p style="color:var(--muted);line-height:1.75;margin-bottom:20px;">AquaEngage ist keine Betriebskosten – es ist ein Umsatzkanal. Die Rechnung ist einfach, das Potenzial sofort da für Unternehmen mit gefestigter Kundenbasis.</p>
+        <p style="color:var(--muted);line-height:1.75;">Unternehmen, die einen digitalen Upsell-Kanal aufbauen, gewinnen in den ersten 90 Tagen 10–30 % der Basis für Zusatzleistungen.</p>
+      </div>
+      <div class="revenue-calc fade-up">
+        <div class="calc-label">📊 Simulation Zusatzumsatz</div>
+        <div class="calc-row"><span>Kunden im Bestand</span><strong>300 Kunden</strong></div>
+        <div class="calc-row"><span>Conversion (konservativ)</span><strong>10 % der Basis</strong></div>
+        <div class="calc-row"><span>Umgestiegene Kunden</span><strong>30 Kunden</strong></div>
+        <div class="calc-row"><span>Wert Zusatzleistung</span><strong>R$ 400/Monat</strong></div>
+        <div class="calc-total">
+          <div class="calc-total-label">Zusätzlicher Monatsumsatz</div>
+          <div class="calc-total-value">R$ 12.000</div>
+          <div class="calc-total-sub">R$ 144.000 pro Jahr · nur durch strukturierten Upsell</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ═══════════════ AUTHORITY ═══════════════ -->
+<section class="authority" id="sobre">
+  <div class="container">
+    <div class="fade-up" style="text-align:center;max-width:640px;margin:0 auto 60px;">
+      <div class="section-label">Warum AquaEngage</div>
+      <h2>Eine Plattform für Unternehmen, die wachsen wollen</h2>
+      <div class="divider" style="margin:20px auto;"></div>
+      <p class="section-sub" style="margin:0 auto;">Wir sind kein weiteres Standard-App. AquaEngage wurde speziell für den Premium-Pool-Service-Markt entwickelt.</p>
+    </div>
+    <div class="authority-grid">
+      <div class="authority-card fade-up">
+        <div class="authority-num">100%</div>
+        <h3>Echtes White-Label</h3>
+        <p>Das gesamte Ökosystem erscheint unter Ihrer Marke: Kunden-App, Techniker-Bereich und Admin-Panel. Kein AquaEngage-Logo, kein Hinweis für den Endnutzer.</p>
+        <p>Sie konfigurieren App-Name, Icons, Farben und Texte. Der Kunde sieht nur Ihr Unternehmen – mehr Vertrauen und professionelles Image bei jeder Interaktion.</p>
+      </div>
+      <div class="authority-card fade-up">
+        <div class="authority-num">B2B</div>
+        <h3>Fokus auf Premium-Unternehmen</h3>
+        <p>Die Plattform ist für Unternehmen gedacht, die Qualität und langfristige Beziehungen priorisieren: Kunden- und Pool-Verwaltung, Service-Termine, Wartungsberichte mit Parametern und Fotos, segmentierte Upsell-Angebote.</p>
+        <p>Alles integriert für einen vollständigen, professionellen Service – Transparenz für den Kunden, operative Kontrolle für Ihr Team. Ergebnis: weniger Kündigungen, mehr Verkaufschancen für Zusatzprodukte und -leistungen.</p>
+      </div>
+      <div class="authority-card fade-up">
+        <div class="authority-num">360°</div>
+        <h3>Vollständige strategische Sicht</h3>
+        <p>Ein Dashboard vereint Kunden, Pools, Services, Berichte und Angebote: Sie verfolgen die Historie jeder Anlage, Termintreue und Upsell-Kampagnen-Performance.</p>
+        <p>Berichte und Kennzahlen unterstützen datenbasierte Entscheidungen, bessere Abläufe und die Identifikation von Wachstumspotenzial. Die 360°-Sicht ermöglicht Skalierung ohne Kontrollverlust.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ PLATFORM PARTS (App Técnico, App Cliente, Web) ═══════════════ -->
+<section class="platform-parts" id="plataforma" aria-labelledby="plataforma-heading">
+  <div class="container">
+    <div class="fade-up" style="text-align:center;max-width:640px;margin:0 auto 60px;">
+      <div class="section-label">Die Plattform im Detail</div>
+      <h2 id="plataforma-heading">Drei Teile, eine integrierte Lösung</h2>
+      <div class="divider" style="margin:20px auto;"></div>
+      <p class="section-sub" style="margin:0 auto;">Techniker-App, Kunden-App und Web-Dashboard – alles in Ihrer Marke, für den Alltag der Pool-Wartung.</p>
+    </div>
+
+    <article class="platform-part fade-up">
+      <h3>1. Kunden-App</h3>
+      <p class="platform-part-desc">Die App, die Ihr Endkunde auf dem Smartphone nutzt: Service-Verlauf, Berichte und Wasserwerte, Termine und Benachrichtigungen. Alles in Ihrer Marke – Transparenz für Vertrauen und Bindung.</p>
+      <div class="platform-video-wrap">
+        <iframe src="https://www.youtube.com/embed/VIDEO_CLIENTE" title="Video: AquaEngage Kunden-App" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <ul class="platform-benefits">
+        <li><strong>Direkter Upsell zum Kunden:</strong> Angebote für Zusatzprodukte und -leistungen erscheinen in der App; der Kunde kauft mit einem Tipp – mehr wiederkehrender Umsatz.</li>
+        <li><strong>Kundenbindung:</strong> Verlauf, Berichte und Wasserwerte nahezu in Echtzeit; der Kunde sieht den Service-Wert und bleibt eher.</li>
+        <li><strong>Stärkung Ihrer Marke:</strong> Die App ist zu 100 % in Ihrer Identität; jeder Nutzung stärkt Ihr Unternehmen als Ansprechpartner für Pool-Pflege.</li>
+        <li><strong>Weniger Arbeit für Ihr Team:</strong> weniger Anrufe und Wiederholungsfragen; der Kunde hat die Infos in der Tasche, Termin-Benachrichtigungen reduzieren No-Shows.</li>
+        <li><strong>Android und iOS, in Ihrer Marke:</strong> professionelles Erlebnis im gesamten Kunden-Ökosystem.</li>
+      </ul>
+    </article>
+
+    <article class="platform-part fade-up">
+      <h3>2. Techniker-App</h3>
+      <p class="platform-part-desc">Die App, die Ihr Techniker vor Ort nutzt: Tagesplan, Kunden- und Pool-Akten, Wasserwerte und Fotos, digitale Signatur und automatische Bestätigung an den Kunden. Alles offline-fähig für Gebiete mit schwachem Empfang.</p>
+      <div class="platform-video-wrap">
+        <iframe src="https://www.youtube.com/embed/VIDEO_TECNICO" title="Video: AquaEngage Techniker-App" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <ul class="platform-benefits">
+        <li><strong>Upsell am Einsatzort:</strong> der Techniker sieht segmentierte Angebote (Produkte, Behandlungen, Zusatzleistungen) und kann vor Ort abschließen – mehr Umsatz pro Besuch.</li>
+        <li><strong>Vereinfachte Abläufe:</strong> ein Tool für Plan, Akten, Parameter und Fotos; weniger Papier, weniger Nacharbeit in der Verwaltung.</li>
+        <li><strong>Stärkung Ihrer Marke:</strong> der Techniker arbeitet mit Ihrer App und Ihrer Identität; der Kunde verbindet den Service mit Ihrem Unternehmen, nicht mit einem Dritten.</li>
+        <li><strong>Bindung durch Transparenz:</strong> Bericht und digitale Signatur vor Ort; der Kunde erhält sofort Bestätigung und fühlt sich sicher – weniger Kündigungen.</li>
+        <li><strong>Stabile Operation:</strong> funktioniert offline und synchronisiert danach; Routen und Daten immer griffbereit, auch bei schwachem Empfang.</li>
+      </ul>
+    </article>
+
+
+    <article class="platform-part fade-up">
+      <h3>3. Web-Dashboard (Admin)</h3>
+      <p class="platform-part-desc">Die Web-Oberfläche zur Steuerung Ihres Unternehmens: Kunden, Pools, Techniker, geplante und erledigte Services, Berichte und Upsell-Kampagnen. 360°-Blick für mehr Umsatz, Bindung und schlanke Prozesse.</p>
+      <div class="platform-video-wrap">
+        <iframe src="https://www.youtube.com/embed/VIDEO_WEB" title="Video: AquaEngage Web-Dashboard" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <ul class="platform-benefits">
+        <li><strong>Upsell unter Kontrolle:</strong> erstellen Sie segmentierte Kampagnen und Angebote (nach Kunde, Pool oder Profil); verfolgen Sie die Performance und optimieren Sie den Zusatzumsatz.</li>
+        <li><strong>Bindung und Transparenz:</strong> Kennzahlen zu Bindung, Zufriedenheit und App-Nutzung; Risiko-Kunden erkennen und Beziehung stärken.</li>
+        <li><strong>Prozessvereinfachung:</strong> zentrale Verwaltung von Kunden, Pools und Technikern; ein Kalender, automatische Berichte, weniger manuelle Verwaltung.</li>
+        <li><strong>Stärkung Ihrer Marke:</strong> alles, was Kunde und Techniker sehen, kommt von Ihrer Marke; Sie steuern Erlebnis und Firmenimage.</li>
+        <li><strong>Datenbasierte Entscheidungen:</strong> Performance-Berichte, Termintreue und Kampagnenergebnisse für nachhaltiges Skalieren.</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<!-- ═══════════════ FORM ═══════════════ -->
+<section class="form-section" id="contato">
+  <div class="container">
+    <div class="form-wrapper">
+      <div class="fade-up">
+        <div class="section-label">Nächster Schritt</div>
+        <h2>Starten Sie ein strategisches Gespräch</h2>
+        <div class="divider"></div>
+        <p style="color:var(--muted);line-height:1.75;margin-bottom:36px;">Füllen Sie das Formular aus – ein AquaEngage-Spezialist meldet sich, um die Situation Ihres Unternehmens zu verstehen und zu zeigen, wie die Plattform für Sie aufgebaut werden kann.</p>
+        <p style="color:var(--accent);font-size:.9rem;font-weight:500;margin-bottom:24px;">Schließen Sie sich über 20 Unternehmen an, die die Plattform bereits nutzen.</p>
+        <div class="form-point">
+          <div class="form-point-icon">📅</div>
+          <div><h4>Strategie-Meeting</h4><p>Vollständige Plattform-Präsentation angepasst an Ihr Unternehmensprofil.</p></div>
+        </div>
+        <div class="form-point">
+          <div class="form-point-icon">🎯</div>
+          <div><h4>Kostenlose Analyse</h4><p>Gemeinsam bewerten wir das Zusatzumsatz-Potenzial Ihrer aktuellen Kundenbasis.</p></div>
+        </div>
+        <div class="form-point">
+          <div class="form-point-icon">🤝</div>
+          <div><h4>Individuelles Angebot</h4><p>Kein Unternehmen ist gleich. Wir erstellen ein Angebot speziell für Ihren Kontext.</p></div>
+        </div>
+      </div>
+      <div class="form-card fade-up">
+        <div class="form-title">Präsentation anfragen</div>
+        <div class="form-sub">Antwort innerhalb von 24 Werktagen.</div>
+        <form id="contactForm" action="#" method="post" aria-label="Formular zur Präsentationsanfrage">
+          <div class="form-group"><label>Vollständiger Name</label><input type="text" placeholder="Ihr Name" required/></div>
+          <div class="form-group"><label>Unternehmen</label><input type="text" placeholder="Ihr Firmenname" required/></div>
+          <div class="form-2col">
+            <div class="form-group"><label>Telefon / WhatsApp</label><input type="tel" placeholder="+49 123 456789" required/></div>
+            <div class="form-group"><label>E-Mail</label><input type="email" placeholder="ihre@firma.de" required/></div>
+          </div>
+          <div class="form-group">
+            <label>Anzahl aktiver Kunden</label>
+            <select required>
+              <option value="" disabled selected>Bitte wählen</option>
+              <option>50 bis 100 Kunden</option>
+              <option>100 bis 200 Kunden</option>
+              <option>200 bis 300 Kunden</option>
+              <option>Mehr als 300 Kunden</option>
+            </select>
+          </div>
+          <button type="submit" class="btn-form">Präsentation anfragen →</button>
+          <div class="form-note">Ihre Daten werden vertraulich behandelt.</div>
+        </form>
+        <div class="success-msg" id="successMsg">✓ Wir haben Ihre Anfrage erhalten! Wir melden uns innerhalb von 24 Werktagen.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ FINAL CTA ═══════════════ -->
+<section class="final-cta">
+  <div class="final-cta-inner">
+    <div class="section-label">Digitale Transformation</div>
+    <h2>Machen Sie Ihr Unternehmen zur digitalen Referenz im Pool-Sektor</h2>
+    <p>Differenzierung beginnt mit einer Entscheidung. Der Zeitpunkt ist jetzt.</p>
+    <div class="final-actions">
+      <a href="#contato" class="btn-primary" style="padding:17px 40px;font-size:1rem;">Strategie-Meeting buchen →</a>
+      <a href="#contato" class="btn-secondary" style="padding:17px 40px;font-size:1rem;">Präsentation anfragen</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">Aqua<span>Engage</span></div>
+  <p style="color:var(--muted);font-size:.8rem;">© 2025 AquaEngage. White-Label-Plattform für Customer Engagement im Premium-Pool-Service-Markt.</p>
+  <p style="color:var(--muted);font-size:.8rem;">Rio de Janeiro, Brasilien</p>
+</footer>
+
+<script>
+  // ── Scroll fade-up ──
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach((e,i) => {
+      if (e.isIntersecting) setTimeout(() => e.target.classList.add('visible'), i*80);
+    });
+  }, {threshold:.1});
+  document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+
+  // ── Nav border ──
+  window.addEventListener('scroll', () => {
+    document.getElementById('navbar').style.borderBottomColor =
+      window.scrollY > 50 ? 'rgba(30,144,255,.18)' : 'rgba(255,255,255,.08)';
+  });
+
+  // ── Carousel ──
+  const cSlides  = document.querySelectorAll('.carousel-slide');
+  const cDotsEl  = document.getElementById('cDots');
+  const cCaption = document.getElementById('cCaption');
+  let cCurrent = 0;
+
+  // Build dots
+  cSlides.forEach((_,i) => {
+    const d = document.createElement('button');
+    d.className = 'cdot' + (i===0 ? ' active' : '');
+    d.onclick = () => cGo(i);
+    cDotsEl.appendChild(d);
+  });
+
+  function cGo(n) {
+    cSlides[cCurrent].classList.remove('active');
+    cDotsEl.children[cCurrent].classList.remove('active');
+    cCurrent = (n + cSlides.length) % cSlides.length;
+    cSlides[cCurrent].classList.add('active');
+    cDotsEl.children[cCurrent].classList.add('active');
+    cCaption.textContent = cSlides[cCurrent].dataset.caption;
+  }
+  function cSlide(dir) { cGo(cCurrent + dir); }
+
+  // Auto-advance every 3.5s
+  setInterval(() => cSlide(1), 3500);
+
+  // ── Form ──
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    this.style.display='none';
+    document.getElementById('successMsg').style.display='block';
+  });
+</script>
+</body>
+</html>
