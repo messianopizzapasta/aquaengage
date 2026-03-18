@@ -503,6 +503,27 @@
       .hphone.main { width:240px; }
       footer { flex-direction:column; text-align:center; }
     }
+    @media (max-width:640px) {
+      /* Prevent phone stack overlaying CTAs on small screens */
+      .hero-phones {
+        height: auto;
+        padding-top: 22px;
+        padding-bottom: 8px;
+        align-items: center;
+      }
+      .hphone { position: relative; bottom: auto; }
+      .hphone.main {
+        left: auto;
+        transform: none;
+        width: min(78vw, 280px);
+      }
+      .revenue-badge {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        margin: 14px auto 0;
+      }
+    }
   </style>
 </head>
 <body>
