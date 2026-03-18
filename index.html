@@ -52,6 +52,18 @@
     }
     .nav-logo { display:flex; align-items:center; gap:12px; }
     .nav-logo img { height:46px; width:auto; display:block; }
+    .nav-links {
+      display:flex; align-items:center; gap:18px;
+    }
+    .nav-links a {
+      color: rgba(139,163,191,.92);
+      font-size: .85rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: color .2s;
+      white-space: nowrap;
+    }
+    .nav-links a:hover { color: #fff; }
     .nav-cta {
       background: var(--accent); color: #fff; border: none;
       padding: 10px 26px; border-radius: 4px;
@@ -472,6 +484,7 @@
     @media (max-width:960px) {
       nav { padding:12px 24px; min-height:64px; }
       .nav-logo img { height:40px; }
+      .nav-links { display:none; }
       section { padding:70px 24px; }
       .hero { padding:100px 24px 60px; }
       .hero-inner, .solution-inner, .revenue-inner, .form-wrapper { grid-template-columns:1fr; gap:48px; }
@@ -494,6 +507,14 @@
     <img src="Aqua Engage - logo 2.png" alt="AquaEngage"/>
   </div>
   <div style="display:flex;align-items:center;gap:20px;">
+    <div class="nav-links" aria-label="Navegação">
+      <a href="#inicio">Início</a>
+      <a href="#problemas">Problemas</a>
+      <a href="#plataforma">Plataforma</a>
+      <a href="#impacto">Impacto</a>
+      <a href="#sobre">Por que</a>
+      <a href="#contato">Contato</a>
+    </div>
     <!-- Sprachmenü vorläufig ausgeblendet -->
     <!--
     <span style="font-size:.8rem;color:var(--muted);">PT</span>
