@@ -551,22 +551,30 @@
         justify-content: center;
       }
       .hero-phones {
-        height: 470px;
+        position: relative;
+        height: auto;
         padding-top: 18px;
-        padding-bottom: 0;
-        align-items: flex-end;
+        padding-bottom: 34px;
+        align-items: center;
         margin-top: 18px;
-        overflow: hidden; /* keep the phone stack inside its own row */
+        overflow: visible; /* do not cut the phone screenshot */
+      }
+      /* Put the phones into normal document flow on mobile (prevents covering CTAs) */
+      .hphone {
+        position: relative;
+        bottom: auto;
       }
       .hphone.main {
-        left: 50%;
-        transform: translateX(-50%);
+        left: auto;
+        transform: none;
         width: min(78vw, 280px);
+        margin: 0 auto;
       }
       .revenue-badge {
         position: absolute;
         right: 18px;
-        bottom: 120px;
+        top: 60%;
+        transform: translateY(-50%);
         margin: 0;
         max-width: calc(100vw - 72px);
         padding: 10px 12px;
